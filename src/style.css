@@ -1,4 +1,4 @@
-/* 定義台北黑體 - 主要字體 */
+/* 字體定義 */
 @font-face {
   font-family: 'Taipei Sans TC';
   src:
@@ -10,7 +10,6 @@
   font-display: swap;
 }
 
-/* 定義俐方體 - 科技風格字體 */
 @font-face {
   font-family: 'Cubic 11';
   src:
@@ -22,10 +21,10 @@
   font-display: swap;
 }
 
-/* Tailwind 基礎樣式 */
-@import 'tailwindcss/base';
-@import 'tailwindcss/components';
-@import 'tailwindcss/utilities';
+/* Tailwind CSS 基礎樣式 - 正確的導入順序 */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 @layer base {
   body {
@@ -46,13 +45,27 @@
     @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
   }
 
-  /* 科技風格標題 */
   .tech-title {
     @apply font-cubic text-tianhing-dark-blue tracking-wider;
   }
 
-  /* 未來科技按鈕 */
   .btn-tech {
     @apply font-cubic bg-gradient-to-r from-tianhing-blue to-tianhing-dark-blue text-white px-6 py-3 rounded border-2 border-tianhing-blue hover:shadow-lg transition-all duration-300;
+  }
+
+  .nav-link {
+    @apply text-gray-700 hover:text-tianhing-dark-blue font-medium transition-colors duration-200 pb-1 border-b-2 border-transparent hover:border-tianhing-blue;
+  }
+
+  .nav-link-active {
+    @apply text-tianhing-dark-blue border-tianhing-blue;
+  }
+
+  .mobile-nav-link {
+    @apply block px-4 py-2 text-gray-700 hover:text-tianhing-dark-blue hover:bg-white rounded-lg transition-colors duration-200;
+  }
+
+  .gradient-bg {
+    @apply bg-gradient-to-br from-tianhing-light-blue to-white;
   }
 }

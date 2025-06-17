@@ -1,5 +1,5 @@
 /** @type {import('tailwindcss').Config} */
-export default {
+module.exports = {
   content: ['./index.html', './src/**/*.{vue,js,ts,jsx,tsx}'],
   theme: {
     extend: {
@@ -10,7 +10,6 @@ export default {
       },
       fontFamily: {
         sans: ['Taipei Sans TC', 'Microsoft JhengHei', 'PingFang TC', 'Noto Sans TC', 'sans-serif'],
-        taipei: ['Taipei Sans TC', 'Microsoft JhengHei', 'PingFang TC', 'sans-serif'],
         cubic: ['Cubic 11', 'Monaco', 'Menlo', 'Ubuntu Mono', 'monospace'],
       },
     },
