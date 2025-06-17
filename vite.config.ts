@@ -9,12 +9,4 @@ export default defineConfig({
     assetsDir: 'assets',
     sourcemap: false,
   },
-  css: {
-    postcss: {
-      plugins: [
-        require('tailwindcss'),
-        require('autoprefixer'),
-      ],
-    },
-  },
 })
