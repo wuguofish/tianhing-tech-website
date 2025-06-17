@@ -4,9 +4,8 @@
       <div class="flex justify-between items-center py-4">
         <!-- Logo 區域 -->
         <div class="flex items-center space-x-3">
-          <div
-            class="w-10 h-10 bg-gradient-to-br from-tianhing-blue to-tianhing-dark-blue rounded-lg flex items-center justify-center">
-            <span class="font-cubic text-white text-sm font-bold">TH</span>
+          <div class="w-20 h-20 flex items-center justify-center">
+            <img src="/logo.svg" alt="天行科技 Logo">
           </div>
           <div>
             <h1 class="font-cubic text-xl text-tianhing-dark-blue font-bold">天行科技</h1>

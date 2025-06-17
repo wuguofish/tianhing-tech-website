@@ -46,7 +46,7 @@
   }
 
   .tech-title {
-    @apply font-cubic text-tianhing-dark-blue tracking-wider;
+    @apply text-tianhing-dark-blue tracking-wider;
   }
 
   .btn-tech {
@@ -67,5 +67,14 @@
 
   .gradient-bg {
     @apply bg-gradient-to-br from-tianhing-light-blue to-white;
+  }
+
+  /* 字體類別 */
+  .font-cubic {
+    font-family: 'Cubic 11', 'Consolas', 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
+  }
+
+  .font-taipei {
+    font-family: 'Taipei Sans TC', 'Microsoft JhengHei', 'PingFang TC', 'Noto Sans TC', sans-serif;
   }
 }

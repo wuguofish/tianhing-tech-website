@@ -12,11 +12,11 @@
               TIANHING TECHNOLOGIES © 2187
             </div>
             <h1 class="text-4xl md:text-6xl font-bold text-gray-800">
-              承前啟後<br>
-              <span class="text-tianhing-dark-blue">數位永生</span>
+              <div>承前啟後</div>
+              <div class="text-tianhing-dark-blue mt-2">數位永生</div>
             </h1>
             <p class="text-lg text-gray-600 leading-relaxed">
-              在西元2187年，天行科技致力於突破生命與數位的界限，
+              從西元2060年起，天行科技致力於突破生命與數位的界限，
               透過先進的人工智慧技術，讓記憶永續、情感延續、關係不滅。
             </p>
           </div>
@@ -30,7 +30,7 @@
               </div>
               <div>
                 <h3 class="font-cubic text-xl text-tianhing-dark-blue font-bold mb-2">
-                  最新發表：訂製伴侶 DA-1001
+                  最新產品：訂製伴侶 DA-1001
                 </h3>
                 <p class="text-gray-600 mb-4">
                   革命性的有機仿生人技術，搭載最新 AI 情感模型，
@@ -38,17 +38,17 @@
                 </p>
                 <div class="flex flex-wrap gap-2 mb-4">
                   <span class="font-cubic text-xs bg-tianhing-light-blue text-tianhing-dark-blue px-2 py-1 rounded">
-                    情感AI v3.7
+                    搭載智策AI v3.7，具有大專院校畢業的教育程度
                   </span>
                   <span class="font-cubic text-xs bg-tianhing-light-blue text-tianhing-dark-blue px-2 py-1 rounded">
-                    生物擬真度 99.8%
+                    真實人類身體，透過基因編輯技術打造
                   </span>
                   <span class="font-cubic text-xs bg-tianhing-light-blue text-tianhing-dark-blue px-2 py-1 rounded">
-                    記憶容量 2.4PB
+                    可自由選配多種模組和功能，打造獨一無二的伴侶體驗
                   </span>
                 </div>
-                <button class="btn-tech">
-                  瞭解更多
+                <button @click="openProductDetails" class="btn-tech" :disabled="isLoading">
+                  {{ isLoading ? '載入中...' : '瞭解更多' }}
                 </button>
               </div>
             </div>
@@ -56,12 +56,12 @@
 
           <!-- CTA 按鈕 -->
           <div class="flex flex-col sm:flex-row gap-4">
-            <button class="btn-primary flex-1">
+            <router-link to="/products" class="btn-primary flex-1 text-center">
               探索所有產品
-            </button>
-            <button class="btn-secondary flex-1">
+            </router-link>
+            <a href="mailto:contact@tianhing.tech?subject=產品諮詢" class="btn-secondary flex-1 text-center">
               聯絡我們
-            </button>
+            </a>
           </div>
         </div>
 
@@ -73,8 +73,8 @@
             <div class="text-center space-y-6">
               <!-- 產品圖示 -->
               <div
-                class="w-32 h-32 mx-auto bg-gradient-to-br from-tianhing-blue to-tianhing-dark-blue rounded-full flex items-center justify-center shadow-lg">
-                <span class="font-cubic text-white text-2xl font-bold">DA</span>
+                class="w-96 mx-auto bg-gradient-to-br from-tianhing-blue to-tianhing-dark-blue rounded-full flex items-center justify-center shadow-lg">
+                <img src="/img/DA-1001.png" alt="產品圖示">
               </div>
 
               <!-- 產品資訊 -->
@@ -90,14 +90,13 @@
               <!-- 技術規格 -->
               <div class="bg-gray-800 rounded-lg p-4 text-left">
                 <div class="font-cubic text-tianhing-light-blue text-xs mb-2">
-                  > 系統規格查詢...
+                  > 產品規格...
                 </div>
                 <div class="font-cubic text-green-400 text-xs space-y-1">
-                  <div>處理器: 量子神經網路 QNN-2187</div>
-                  <div>記憶體: 2.4PB 全息記憶體</div>
-                  <div>情感模組: EmotiCore v3.7</div>
-                  <div>學習能力: 自適應深度學習</div>
-                  <div>外觀: 100% 客製化</div>
+                  <div>生理性別: 男性</div>
+                  <div>可搭載模組數: 25組</div>
+                  <div>預設知識水準: 智策AI v3.7</div>
+                  <div>外觀、性格: 100% 客製化</div>
                 </div>
                 <div class="font-cubic text-tianhing-light-blue text-xs mt-2">
                   > 狀態: 線上 | 就緒
@@ -128,20 +127,17 @@
         <div
           class="bg-white rounded-2xl shadow-lg overflow-hidden border border-tianhing-blue transform hover:scale-105 transition-transform duration-300">
           <div class="bg-gradient-to-br from-tianhing-blue to-tianhing-dark-blue p-6">
-            <div class="w-16 h-16 bg-white rounded-lg flex items-center justify-center mb-4">
-              <span class="font-cubic text-tianhing-dark-blue text-xl font-bold">DA</span>
-            </div>
             <h3 class="font-cubic text-white text-xl font-bold">訂製伴侶</h3>
             <p class="text-tianhing-light-blue text-sm">Digital Companion</p>
           </div>
           <div class="p-6">
             <p class="text-gray-600 mb-4">
-              結合有機仿生技術與先進AI，創造獨一無二的陪伴體驗
+              結合仿生人技術與先進AI，創造獨一無二的陪伴體驗
             </p>
             <ul class="space-y-2 text-sm text-gray-500 mb-6">
-              <li>• 99.8% 生物擬真度</li>
+              <li>• 真實人類身體</li>
               <li>• 完全客製化外觀</li>
-              <li>• 深度情感學習</li>
+              <li>• 可自由選擇個性</li>
             </ul>
             <button class="w-full btn-tech text-sm">瞭解更多</button>
           </div>
@@ -151,9 +147,6 @@
         <div
           class="bg-white rounded-2xl shadow-lg overflow-hidden border border-tianhing-blue transform hover:scale-105 transition-transform duration-300">
           <div class="bg-gradient-to-br from-tianhing-dark-blue to-gray-700 p-6">
-            <div class="w-16 h-16 bg-white rounded-lg flex items-center justify-center mb-4">
-              <span class="font-cubic text-tianhing-dark-blue text-xl font-bold">MN</span>
-            </div>
             <h3 class="font-cubic text-white text-xl font-bold">心靈網路</h3>
             <p class="text-tianhing-light-blue text-sm">Mind Network</p>
           </div>
@@ -174,9 +167,6 @@
         <div
           class="bg-white rounded-2xl shadow-lg overflow-hidden border border-tianhing-blue transform hover:scale-105 transition-transform duration-300">
           <div class="bg-gradient-to-br from-gray-700 to-gray-800 p-6">
-            <div class="w-16 h-16 bg-white rounded-lg flex items-center justify-center mb-4">
-              <span class="font-cubic text-tianhing-dark-blue text-xl font-bold">DS</span>
-            </div>
             <h3 class="font-cubic text-white text-xl font-bold">數位觀落陰</h3>
             <p class="text-tianhing-light-blue text-sm">Digital Séance</p>
           </div>
@@ -252,5 +242,28 @@
 </template>
 
 <script setup lang="ts">
-// 首頁不需要額外的邏輯
+import { ref } from 'vue'
+
+const isLoading = ref(false)
+
+// 開啟產品詳細頁面的新視窗
+const openProductDetails = async () => {
+  isLoading.value = true
+
+  try {
+    // 可以在這裡加入分析追蹤
+    // analytics.track('product_detail_clicked', { product: 'DA-1001' })
+
+    // 小延遲提供視覺回饋
+    await new Promise(resolve => setTimeout(resolve, 200))
+
+    // 開啟新視窗
+    const url = `./products`
+    window.open(url, '_blank', 'noopener, noreferrer')
+  } catch (error) {
+    console.error('開啟產品頁面時發生錯誤:', error)
+  } finally {
+    isLoading.value = false
+  }
+}
 </script>
