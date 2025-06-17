@@ -17,23 +17,23 @@
     <!-- 產品導航 -->
     <section class="section-container py-8">
       <div class="flex flex-wrap justify-center gap-4">
-        <button @click="activeProduct = 'da'"
-          :class="['btn-tech text-sm px-6 py-3', activeProduct === 'da' ? 'bg-tianhing-dark-blue' : '']">
+        <button @click="switchProduct('da')"
+          :class="['btn-tech text-sm px-6 py-3', activeProduct === 'da' ? 'bg-blue-700' : '']">
           訂製伴侶 DA-1001
         </button>
-        <button @click="activeProduct = 'mn'"
-          :class="['btn-tech text-sm px-6 py-3', activeProduct === 'mn' ? 'bg-tianhing-dark-blue' : '']">
+        <button @click="switchProduct('mn')"
+          :class="['btn-tech text-sm px-6 py-3', activeProduct === 'mn' ? 'bg-blue-700' : '']">
           心靈網路
         </button>
-        <button @click="activeProduct = 'ds'"
-          :class="['btn-tech text-sm px-6 py-3', activeProduct === 'ds' ? 'bg-tianhing-dark-blue' : '']">
+        <button @click="switchProduct('ds')"
+          :class="['btn-tech text-sm px-6 py-3', activeProduct === 'ds' ? 'bg-blue-700' : '']">
           數位觀落陰
         </button>
       </div>
     </section>
 
     <!-- 訂製伴侶 DA-1001 -->
-    <section v-if="activeProduct === 'da'" class="section-container py-16">
+    <section v-if="activeProduct === 'da'" id="da-1001" class="section-container py-16 product-section">
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-16">
         <div>
           <div class="flex items-center space-x-3 mb-6">
@@ -49,12 +49,12 @@
 
           <div class="space-y-4 text-gray-600">
             <p class="text-lg">
-              革命性的有機仿生人技術，結合最先進的情感AI模型，
+              革命性的有機仿生人技術，結合最先進的AI模型，
               創造獨一無二的個人化陪伴體驗。
             </p>
             <p>
-              DA-1001 不僅擁有99.8%的生物擬真度，更具備深度學習能力，
-              能夠理解並回應人類複雜的情感需求，提供真正有意義的陪伴。
+              DA-1001 透過編輯基因技術，從人來改編而來的仿生人，生理各方面功能如同真正的人類，
+              但又有更好的身體素質，能夠理解並回應人類複雜的情感需求，提供真正有意義的陪伴。
             </p>
             <p>
               每一個DA-1001都是根據使用者需求完全客製化，
@@ -63,33 +63,34 @@
           </div>
 
           <div class="mt-8">
-            <button class="btn-primary mr-4">立即訂製</button>
-            <button class="btn-secondary">技術規格</button>
+            <a href="https://abr.ge/68p4k4" target="_blank">
+              <button class="btn-primary mr-4">立即訂製</button>
+            </a>
+            <button class="btn-secondary">可選外型預覽</button>
           </div>
         </div>
 
         <div class="bg-gradient-to-br from-tianhing-light-blue to-white p-8 rounded-2xl border border-tianhing-blue">
-          <h3 class="font-cubic text-tianhing-dark-blue text-xl font-bold mb-6">技術規格</h3>
+          <h3 class="font-cubic text-tianhing-dark-blue text-xl font-bold mb-6">產品預設規格</h3>
           <div class="space-y-4">
             <div class="flex justify-between items-center border-b border-gray-200 pb-2">
-              <span class="text-gray-600">處理器</span>
-              <span class="font-cubic text-tianhing-dark-blue">量子神經網路 QNN-2187</span>
+              <span class="text-gray-600">生理數值</span>
+              <span class="font-cubic text-tianhing-dark-blue">25歲男性</span>
             </div>
             <div class="flex justify-between items-center border-b border-gray-200 pb-2">
-              <span class="text-gray-600">記憶容量</span>
-              <span class="font-cubic text-tianhing-dark-blue">2.4PB 全息記憶體</span>
+              <span class="text-gray-600">預設名字</span>
+              <span class="font-cubic text-tianhing-dark-blue">戴維(David)</span>
+            </div>
+            <div class="flex justify-end items-center border-b border-gray-200 pb-2">
+              <span class="font-cubic text-gray-400 text-sm"> > 如同大衛像一般，完美的藝術品 </span>
             </div>
             <div class="flex justify-between items-center border-b border-gray-200 pb-2">
-              <span class="text-gray-600">情感模組</span>
-              <span class="font-cubic text-tianhing-dark-blue">EmotiCore v3.7</span>
+              <span class="text-gray-600">出廠體型</span>
+              <span class="font-cubic text-tianhing-dark-blue">180公分、70公斤</span>
             </div>
             <div class="flex justify-between items-center border-b border-gray-200 pb-2">
-              <span class="text-gray-600">生物擬真度</span>
-              <span class="font-cubic text-tianhing-dark-blue">99.8%</span>
-            </div>
-            <div class="flex justify-between items-center border-b border-gray-200 pb-2">
-              <span class="text-gray-600">學習能力</span>
-              <span class="font-cubic text-tianhing-dark-blue">自適應深度學習</span>
+              <span class="text-gray-600">認知能力</span>
+              <span class="font-cubic text-tianhing-dark-blue">智策AI v3.7（大專院校畢業的知識水準）</span>
             </div>
             <div class="flex justify-between items-center border-b border-gray-200 pb-2">
               <span class="text-gray-600">外觀客製化</span>
@@ -101,17 +102,6 @@
             </div>
           </div>
 
-          <div class="mt-6 p-4 bg-gray-800 rounded-lg">
-            <div class="font-cubic text-tianhing-light-blue text-xs mb-2">
-              > DA-1001 系統狀態檢測...
-            </div>
-            <div class="font-cubic text-green-400 text-xs space-y-1">
-              <div>✓ 情感回應系統: 正常</div>
-              <div>✓ 記憶同步: 完成</div>
-              <div>✓ 學習模組: 活躍</div>
-              <div>✓ 安全防護: 啟用</div>
-            </div>
-          </div>
         </div>
       </div>
 
@@ -125,9 +115,9 @@
                 clip-rule="evenodd" />
             </svg>
           </div>
-          <h4 class="font-cubic text-lg font-bold text-tianhing-dark-blue mb-2">情感深度學習</h4>
+          <h4 class="font-cubic text-lg font-bold text-tianhing-dark-blue mb-2">真正的人類</h4>
           <p class="text-sm text-gray-600">
-            透過EmotiCore技術，深度理解並回應複雜的人類情感，提供真正有意義的情感支持
+            透過編輯基因技術，生理各方面功能如同真正的人類，提供真正有意義的情感支持
           </p>
         </div>
 
@@ -159,7 +149,7 @@
     </section>
 
     <!-- 心靈網路 -->
-    <section v-if="activeProduct === 'mn'" class="section-container py-16">
+    <section v-if="activeProduct === 'mn'" id="mind-network" class="section-container py-16">
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-16">
         <div>
           <div class="flex items-center space-x-3 mb-6">
@@ -274,7 +264,7 @@
     </section>
 
     <!-- 數位觀落陰 -->
-    <section v-if="activeProduct === 'ds'" class="section-container py-16">
+    <section v-if="activeProduct === 'ds'" id="digital-seance" class="section-container py-16">
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-16">
         <div>
           <div class="flex items-center space-x-3 mb-6">
@@ -508,7 +498,104 @@
 </template>
 
 <script setup lang="ts">
-import { ref } from 'vue'
+import { ref, onMounted, nextTick } from 'vue'
 
 const activeProduct = ref('da')
+
+// 根據 URL 錨點設定當前產品
+const setActiveProductFromHash = () => {
+  const hash = window.location.hash
+
+  if (hash === '#da-1001') {
+    activeProduct.value = 'da'
+  } else if (hash === '#mind-network') {
+    activeProduct.value = 'mn'
+  } else if (hash === '#digital-seance') {
+    activeProduct.value = 'ds'
+  }
+}
+
+// 捲動到指定區塊
+const scrollToSection = async (sectionId: string) => {
+  // 等待 DOM 更新完成
+  await nextTick()
+
+  // 短暫延遲確保元素已渲染
+  setTimeout(() => {
+    const element = document.getElementById(sectionId)
+    if (element) {
+      // 平滑捲動到元素
+      element.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start',
+        inline: 'nearest'
+      })
+
+      // 或者使用自訂的捲動動畫
+      // const offsetTop = element.offsetTop - 80 // 80px 是 header 高度
+      // window.scrollTo({
+      //   top: offsetTop,
+      //   behavior: 'smooth'
+      // })
+    }
+  }, 100) // 100ms 延遲
+}
+
+// 根據錨點設定產品並捲動
+const handleProductChange = async () => {
+  setActiveProductFromHash()
+
+  // 根據當前產品捲動到對應區塊
+  const sectionMap = {
+    'da': 'da-1001',
+    'mn': 'mind-network',
+    'ds': 'digital-seance'
+  }
+
+  const sectionId = sectionMap[activeProduct.value as keyof typeof sectionMap]
+  if (sectionId) {
+    await scrollToSection(sectionId)
+  }
+}
+
+// 監聽錨點變化
+const handleHashChange = () => {
+  handleProductChange()
+}
+
+onMounted(() => {
+  // 初始化時檢查錨點並捲動
+  handleProductChange()
+
+  // 監聽錨點變化
+  window.addEventListener('hashchange', handleHashChange)
+})
+
+// 切換產品並更新 URL
+const switchProduct = async (productId: string) => {
+  activeProduct.value = productId
+
+  // 更新 URL 錨點
+  const sectionMap = {
+    'da': '#da-1001',
+    'mn': '#mind-network',
+    'ds': '#digital-seance'
+  }
+
+  const hash = sectionMap[productId as keyof typeof sectionMap]
+  if (hash) {
+    // 更新 URL 但不觸發頁面重新載入
+    window.history.replaceState(null, '', hash)
+
+    // 捲動到對應區塊
+    const sectionId = hash.substring(1) // 移除 # 符號
+    await scrollToSection(sectionId)
+  }
+}
+
+// 清理事件監聽器
+import { onUnmounted } from 'vue'
+onUnmounted(() => {
+  window.removeEventListener('hashchange', handleHashChange)
+})
 </script>

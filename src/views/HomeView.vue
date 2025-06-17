@@ -139,7 +139,9 @@
               <li>• 完全客製化外觀</li>
               <li>• 可自由選擇個性</li>
             </ul>
-            <button class="w-full btn-tech text-sm">瞭解更多</button>
+            <button @click="openProductDetail('da')" class="w-full btn-tech text-sm">
+              瞭解更多
+            </button>
           </div>
         </div>
 
@@ -159,7 +161,9 @@
               <li>• 情感共感體驗</li>
               <li>• 群體意識協作</li>
             </ul>
-            <button class="w-full btn-tech text-sm">瞭解更多</button>
+            <button @click="openProductDetail('mn')" class="w-full btn-tech text-sm">
+              瞭解更多
+            </button>
           </div>
         </div>
 
@@ -179,7 +183,9 @@
               <li>• 記憶資料分析</li>
               <li>• 情感撫慰體驗</li>
             </ul>
-            <button class="w-full btn-tech text-sm">瞭解更多</button>
+            <button @click="openProductDetail('ds')" class="w-full btn-tech text-sm">
+              瞭解更多
+            </button>
           </div>
         </div>
       </div>
@@ -265,5 +271,22 @@ const openProductDetails = async () => {
   } finally {
     isLoading.value = false
   }
+}
+
+// 開啟指定產品的詳細頁面
+const openProductDetail = (productId: string) => {
+  // 根據產品 ID 決定開啟方式
+  const productUrls = {
+    'da': './products#da-1001',      // 訂製伴侶
+    'mn': './products#mind-network', // 心靈網路
+    'ds': './products#digital-seance' // 數位觀落陰
+  }
+
+  // 建立完整 URL
+  const targetUrl = productUrls[productId as keyof typeof productUrls]
+
+  // 在新視窗中開啟指定產品頁面
+  window.open(targetUrl, '_blank', 'noopener,noreferrer')
+
 }
 </script>
