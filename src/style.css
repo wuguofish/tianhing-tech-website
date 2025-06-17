@@ -1,0 +1,58 @@
+/* 定義台北黑體 - 主要字體 */
+@font-face {
+  font-family: 'Taipei Sans TC';
+  src:
+    url('./assets/fonts/TaipeiSansTCBeta-Regular.woff2') format('woff2'),
+    url('./assets/fonts/TaipeiSansTCBeta-Regular.woff') format('woff'),
+    url('./assets/fonts/TaipeiSansTCBeta-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* 定義俐方體 - 科技風格字體 */
+@font-face {
+  font-family: 'Cubic 11';
+  src:
+    url('./assets/fonts/Cubic_11.woff2') format('woff2'),
+    url('./assets/fonts/Cubic_11.woff') format('woff'),
+    url('./assets/fonts/Cubic_11.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Tailwind 基礎樣式 */
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+@layer base {
+  body {
+    font-family: 'Taipei Sans TC', 'Microsoft JhengHei', 'PingFang TC', 'Noto Sans TC', sans-serif;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-tianhing-blue hover:bg-tianhing-dark-blue text-white font-bold py-3 px-6 rounded-lg transition-all duration-300 transform hover:scale-105;
+  }
+
+  .btn-secondary {
+    @apply border-2 border-tianhing-blue text-tianhing-blue hover:bg-tianhing-blue hover:text-white font-bold py-3 px-6 rounded-lg transition-all duration-300;
+  }
+
+  .section-container {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  /* 科技風格標題 */
+  .tech-title {
+    @apply font-cubic text-tianhing-dark-blue tracking-wider;
+  }
+
+  /* 未來科技按鈕 */
+  .btn-tech {
+    @apply font-cubic bg-gradient-to-r from-tianhing-blue to-tianhing-dark-blue text-white px-6 py-3 rounded border-2 border-tianhing-blue hover:shadow-lg transition-all duration-300;
+  }
+}
