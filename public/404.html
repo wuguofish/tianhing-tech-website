@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="zh-TW">
+  <head>
+    <meta charset="utf-8" />
+    <title>天行科技 TIANHING TECHNOLOGIES</title>
+    <script type="text/javascript">
+      // GitHub Pages 重定向腳本
+      // 將路徑和查詢字串轉換為 index.html 的查詢參數
+      var pathSegmentsToKeep = 1 // tianhing-tech-website
+
+      var l = window.location
+      l.replace(
+        l.protocol +
+          '//' +
+          l.hostname +
+          (l.port ? ':' + l.port : '') +
+          l.pathname
+            .split('/')
+            .slice(0, 1 + pathSegmentsToKeep)
+            .join('/') +
+          '/?/' +
+          l.pathname
+            .slice(1)
+            .split('/')
+            .slice(pathSegmentsToKeep)
+            .join('/')
+            .replace(/&/g, '~and~') +
+          (l.search ? '&' + l.search.slice(1).replace(/&/g, '~and~') : '') +
+          l.hash,
+      )
+    </script>
+  </head>
+  <body>
+    <div style="text-align: center; padding: 50px; font-family: 'Microsoft JhengHei', sans-serif">
+      <h1>天行科技</h1>
+      <p>頁面載入中，請稍候...</p>
+      <p>如果沒有正常載入，請 <a href="/">點擊這裡</a> 回到首頁</p>
+    </div>
+  </body>
+</html>
