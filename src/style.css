@@ -30,11 +30,25 @@
   body {
     font-family: 'Taipei Sans TC', 'Microsoft JhengHei', 'PingFang TC', 'Noto Sans TC', sans-serif;
   }
+
+  /* 平滑滾動 */
+  html {
+    scroll-behavior: smooth;
+  }
+
+  /* 防止滾動時的抖動 */
+  * {
+    scroll-margin-top: 80px; /* header 高度 */
+  }
 }
 
 @layer components {
   .btn-primary {
     @apply bg-tianhing-blue hover:bg-tianhing-dark-blue text-white font-bold py-3 px-6 rounded-lg transition-all duration-300 transform hover:scale-105;
+  }
+
+  .btn-accent {
+    @apply bg-gradient-to-r from-tianhing-blue to-tianhing-dark-blue hover:bg-tianhing-dark-blue text-white font-bold py-3 px-6 rounded-lg transition-all duration-300 transform hover:scale-105;
   }
 
   .btn-secondary {
@@ -96,5 +110,21 @@
       box-shadow: 0 0 0 0 rgba(59, 130, 246, 0);
       transform: scale(1);
     }
+  }
+
+  /* 頁面過渡動畫 */
+  .page-enter-active,
+  .page-leave-active {
+    transition: all 0.3s ease;
+  }
+
+  .page-enter-from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  .page-leave-to {
+    opacity: 0;
+    transform: translateY(-20px);
   }
 }

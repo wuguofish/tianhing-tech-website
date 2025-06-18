@@ -27,10 +27,12 @@
         <div class="space-y-4">
           <h4 class="font-cubic text-lg font-semibold text-tianhing-light-blue">核心產品</h4>
           <ul class="space-y-2 text-sm">
-            <li><a href="#" class="hover:text-tianhing-light-blue transition-colors">訂製伴侶 DA-1001</a></li>
-            <li><a href="#" class="hover:text-tianhing-light-blue transition-colors">心靈網路平台</a></li>
-            <li><a href="#" class="hover:text-tianhing-light-blue transition-colors">數位觀落陰系統</a></li>
-            <li><a href="#" class="hover:text-tianhing-light-blue transition-colors">意識同步技術</a></li>
+            <li><a href="./products#da-1001" class="hover:text-tianhing-light-blue transition-colors">訂製伴侶 DA-1001</a>
+            </li>
+            <li><a href="./products#mind-network" class="hover:text-tianhing-light-blue transition-colors">心靈網路平台</a>
+            </li>
+            <li><a href="./products#digital-seance" class="hover:text-tianhing-light-blue transition-colors">數位觀落陰系統</a>
+            </li>
           </ul>
         </div>
 
@@ -44,15 +46,23 @@
             </li>
             <li class="flex items-center space-x-2">
               <span class="w-2 h-2 bg-tianhing-light-blue rounded-full"></span>
+              <span>馬來西亞辦公室</span>
+            </li>
+            <li class="flex items-center space-x-2">
+              <span class="w-2 h-2 bg-tianhing-light-blue rounded-full"></span>
               <span>台灣分公司</span>
             </li>
             <li class="flex items-center space-x-2">
               <span class="w-2 h-2 bg-tianhing-light-blue rounded-full"></span>
-              <span>中國分公司</span>
+              <span>大中華邦聯分公司</span>
             </li>
             <li class="flex items-center space-x-2">
               <span class="w-2 h-2 bg-tianhing-light-blue rounded-full"></span>
-              <span>東南亞區域中心</span>
+              <span>泰國辦公室</span>
+            </li>
+            <li class="flex items-center space-x-2">
+              <span class="w-2 h-2 bg-tianhing-light-blue rounded-full"></span>
+              <span>菲律賓辦公室</span>
             </li>
           </ul>
         </div>
@@ -96,9 +106,9 @@
             <span>版權所有</span>
           </div>
           <div class="flex items-center space-x-6 text-sm text-gray-400">
-            <a href="#" class="hover:text-tianhing-light-blue transition-colors">隱私政策</a>
-            <a href="#" class="hover:text-tianhing-light-blue transition-colors">服務條款</a>
-            <a href="#" class="hover:text-tianhing-light-blue transition-colors">意識安全聲明</a>
+            <a href="./guidelines" class="hover:text-tianhing-light-blue transition-colors">隱私政策</a>
+            <a href="./guidelines" class="hover:text-tianhing-light-blue transition-colors">服務條款</a>
+            <a href="./guidelines" class="hover:text-tianhing-light-blue transition-colors">意識安全聲明</a>
           </div>
         </div>
 

@@ -64,9 +64,9 @@
 
           <div class="mt-8">
             <a href="https://abr.ge/68p4k4" target="_blank">
-              <button class="btn-primary mr-4">立即訂製</button>
+              <button class="btn-primary mr-4">立即訂購</button>
             </a>
-            <button class="btn-secondary">可選外型預覽</button>
+            <button class="btn-secondary" @click="openGallery">可選外型預覽</button>
           </div>
         </div>
 
@@ -146,6 +146,10 @@
           </p>
         </div>
       </div>
+
+      <!-- Product Gallery Modal -->
+      <ProductGallery :is-open="isGalleryOpen" @close="closeGallery" />
+
     </section>
 
     <!-- 心靈網路 -->
@@ -499,8 +503,24 @@
 
 <script setup lang="ts">
 import { ref, onMounted, nextTick } from 'vue'
+import ProductGallery from '../components/products/ProductGallery.vue'
 
 const activeProduct = ref('da')
+const isGalleryOpen = ref(false)
+
+// Gallery 控制
+const openGallery = () => {
+  isGalleryOpen.value = true
+  // 防止背景滾動
+  document.body.style.overflow = 'hidden'
+}
+
+const closeGallery = () => {
+  isGalleryOpen.value = false
+  // 恢復背景滾動
+  document.body.style.overflow = ''
+}
+
 
 // 根據 URL 錨點設定當前產品
 const setActiveProductFromHash = () => {

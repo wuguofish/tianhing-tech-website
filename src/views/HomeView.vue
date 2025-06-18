@@ -2,19 +2,26 @@
   <div class="bg-gradient-to-br from-tianhing-light-blue via-white to-tianhing-light-blue">
 
     <!-- Hero 區塊 -->
-    <section class="section-container py-16 md:py-24">
+    <section class="section-container py-16">
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
 
         <!-- 左側內容 -->
-        <div class="space-y-8">
-          <div class="space-y-4">
-            <div class="font-cubic text-tianhing-blue text-sm tracking-wider">
-              TIANHING TECHNOLOGIES © 2187
+        <div class="space-y-16">
+          <div class="space-y-8">
+            <div class="space-x-4 flex flex-row">
+              <div class="w-full flex-1">
+                <img src="/logo.svg" alt="天行科技 Logo">
+              </div>
+              <div class="flex flex-col items-center justify-center flex-1">
+                <div class="font-cubic text-tianhing-blue text-sm tracking-wider mb-1">
+                  TIANHING TECHNOLOGIES © 2187
+                </div>
+                <h1 class="text-4xl md:text-6xl font-bold text-gray-800">
+                  <div>承前啟後</div>
+                  <div class="text-tianhing-dark-blue mt-2">數位永生</div>
+                </h1>
+              </div>
             </div>
-            <h1 class="text-4xl md:text-6xl font-bold text-gray-800">
-              <div>承前啟後</div>
-              <div class="text-tianhing-dark-blue mt-2">數位永生</div>
-            </h1>
             <p class="text-lg text-gray-600 leading-relaxed">
               從西元2060年起，天行科技致力於突破生命與數位的界限，
               透過先進的人工智慧技術，讓記憶永續、情感延續、關係不滅。
@@ -22,11 +29,11 @@
           </div>
 
           <!-- 最新產品亮點 -->
-          <div class="bg-white rounded-2xl shadow-lg p-6 border-l-4 border-tianhing-blue">
+          <div class="bg-white rounded-2xl shadow-lg p-6 border-l-4 border-tianhing-blue space-y-4">
             <div class="flex items-start space-x-4">
               <div
-                class="w-12 h-12 bg-gradient-to-br from-tianhing-blue to-tianhing-dark-blue rounded-lg flex items-center justify-center flex-shrink-0">
-                <span class="font-cubic text-white text-xs">NEW</span>
+                class="w-16 h-16 bg-gradient-to-br from-tianhing-blue to-tianhing-dark-blue rounded-lg flex items-center justify-center flex-shrink-0">
+                <span class="font-cubic text-white text-s font-bold">NEW</span>
               </div>
               <div>
                 <h3 class="font-cubic text-xl text-tianhing-dark-blue font-bold mb-2">
@@ -47,22 +54,23 @@
                     可自由選配多種模組和功能，打造獨一無二的伴侶體驗
                   </span>
                 </div>
-                <button @click="openProductDetails" class="btn-tech" :disabled="isLoading">
-                  {{ isLoading ? '載入中...' : '瞭解更多' }}
-                </button>
               </div>
+            </div>
+            <!-- CTA 按鈕 -->
+            <div class="flex flex-col sm:flex-row gap-4">
+              <a href="https://abr.ge/68p4k4" target="_blank" class="max-sm:flex-1 sm:w-2/3 text-center">
+                <button class="btn-accent w-full h-full">
+                  立即訂購
+                </button>
+              </a>
+              <button @click="openProductDetail('da')" class="btn-secondary max-sm:flex-1 sm:w-1/3"
+                :disabled="isLoading">
+                {{ isLoading ? '載入中...' : '瞭解更多' }}
+              </button>
             </div>
           </div>
 
-          <!-- CTA 按鈕 -->
-          <div class="flex flex-col sm:flex-row gap-4">
-            <router-link to="/products" class="btn-primary flex-1 text-center">
-              探索所有產品
-            </router-link>
-            <a href="mailto:contact@tianhing.tech?subject=產品諮詢" class="btn-secondary flex-1 text-center">
-              聯絡我們
-            </a>
-          </div>
+
         </div>
 
         <!-- 右側視覺 -->
@@ -73,7 +81,7 @@
             <div class="text-center space-y-6">
               <!-- 產品圖示 -->
               <div
-                class="w-96 mx-auto bg-gradient-to-br from-tianhing-blue to-tianhing-dark-blue rounded-full flex items-center justify-center shadow-lg">
+                class="w-2/3 mx-auto bg-gradient-to-br from-tianhing-blue to-tianhing-dark-blue rounded-full flex items-center justify-center shadow-lg">
                 <img src="/img/DA-1001.png" alt="產品圖示">
               </div>
 
@@ -95,11 +103,10 @@
                 <div class="font-cubic text-green-400 text-xs space-y-1">
                   <div>生理性別: 男性</div>
                   <div>可搭載模組數: 25組</div>
-                  <div>預設知識水準: 智策AI v3.7</div>
                   <div>外觀、性格: 100% 客製化</div>
                 </div>
                 <div class="font-cubic text-tianhing-light-blue text-xs mt-2">
-                  > 狀態: 線上 | 就緒
+                  > 狀態: 線上 | 熱銷中...
                 </div>
               </div>
             </div>
@@ -107,7 +114,7 @@
 
           <!-- 浮動元素 -->
           <div class="absolute -top-4 -right-4 w-24 h-24 bg-tianhing-blue rounded-full opacity-20 animate-pulse"></div>
-          <div class="absolute -bottom-4 -left-4 w-16 h-16 bg-tianhing-dark-blue rounded-full opacity-30 animate-pulse"
+          <div class="absolute -bottom-4 -left-6 w-16 h-16 bg-tianhing-dark-blue rounded-full opacity-30 animate-pulse"
             style="animation-delay: 1s;"></div>
         </div>
       </div>
@@ -212,7 +219,7 @@
               </p>
             </div>
             <div class="mt-8">
-              <button class="btn-primary">瞭解我們的故事</button>
+              <router-link to="/about" class="btn-primary">瞭解我們的故事</router-link>
             </div>
           </div>
 

@@ -26,9 +26,10 @@
           </router-link>
 
           <!-- 聯絡按鈕 -->
-          <button class="btn-tech text-sm px-4 py-2">
+          <a href="https://wuguofish.github.io/lonely-chat-ai/#contact" target="_blank"
+            class="btn-tech text-sm px-4 py-2">
             聯絡我們
-          </button>
+          </a>
         </div>
 
         <!-- 手機版選單按鈕 -->
@@ -54,9 +55,10 @@
           <router-link to="/products" class="mobile-nav-link" @click="closeMobileMenu">
             產品介紹
           </router-link>
-          <button class="w-full text-left mobile-nav-link text-tianhing-dark-blue font-medium" @click="closeMobileMenu">
+          <a href="https://wuguofish.github.io/lonely-chat-ai/#contact" target="_blank"
+            class="w-full text-left mobile-nav-link text-tianhing-dark-blue font-medium" @click="closeMobileMenu">
             聯絡我們
-          </button>
+          </a>
         </div>
       </div>
     </nav>
