@@ -553,7 +553,7 @@ const handleProductChange = async () => {
   }
 
   const sectionId = sectionMap[activeProduct.value as keyof typeof sectionMap]
-  if (sectionId) {
+  if (sectionId && window.location.hash) {
     await scrollToSection(sectionId)
   }
 }

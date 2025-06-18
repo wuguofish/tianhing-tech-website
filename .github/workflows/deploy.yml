@@ -1,17 +1,15 @@
-name: 部署到 GitHub Pages
+name: 部署靜態網站到 GitHub Pages
 
 on:
   push:
     branches: [ main ]
-  workflow_dispatch: # 允許手動觸發
+  workflow_dispatch:
 
-# 設定權限
 permissions:
   contents: read
   pages: write
   id-token: write
 
-# 避免並發部署
 concurrency:
   group: "pages"
   cancel-in-progress: false
@@ -20,13 +18,13 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout 🛎️
+      - name: Checkout
         uses: actions/checkout@v4
         
-      - name: 設定 Node.js 環境
+      - name: 設定 Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '20' # 使用 LTS 版本
+          node-version: '20'
           cache: 'npm'
           
       - name: 安裝依賴
@@ -38,7 +36,7 @@ jobs:
       - name: 設定 Pages
         uses: actions/configure-pages@v4
         
-      - name: 上傳 artifacts
+      - name: 上傳靜態檔案
         uses: actions/upload-pages-artifact@v3
         with:
           path: './dist'
