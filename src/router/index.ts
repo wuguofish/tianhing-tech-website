@@ -7,23 +7,38 @@ const router = createRouter({
     {
       path: '/',
       name: 'home',
-      component: HomeView
+      component: HomeView,
     },
     {
       path: '/about',
       name: 'about',
-      component: () => import('../views/AboutView.vue')
+      component: () => import('../views/AboutView.vue'),
     },
     {
       path: '/products',
       name: 'products',
-      component: () => import('../views/ProductsView.vue')
+      component: () => import('../views/ProductsView.vue'),
     },
     {
       path: '/guidelines',
       name: 'guidelines',
-      component: () => import('../views/GuidelinesView.vue')
-    }
+      component: () => import('../views/GuidelinesView.vue'),
+    },
+    {
+      path: '/specialthanks',
+      name: 'specialthanks',
+      component: () => import('../views/SpecialThanksView.vue'),
+    },
+    {
+      path: '/readme',
+      name: 'readme',
+      component: () => import('../views/ReadmeView.vue'),
+    },
+    {
+      path: '/demo',
+      name: 'demo',
+      component: () => import('../views/DemoView.vue'),
+    },
   ],
   // 滾動行為配置
   // 進階滾動行為配置
@@ -42,7 +57,7 @@ const router = createRouter({
 
             scrollTo = {
               top: Math.max(0, elementTop - headerHeight),
-              behavior: 'smooth'
+              behavior: 'smooth',
             }
           }
         }
@@ -50,7 +65,7 @@ const router = createRouter({
         else if (savedPosition) {
           scrollTo = {
             ...savedPosition,
-            behavior: 'smooth'
+            behavior: 'smooth',
           }
         }
         // 特定路由的滾動處理
@@ -62,7 +77,7 @@ const router = createRouter({
         resolve(scrollTo)
       }, 100) // 100ms 延遲
     })
-  }
+  },
 })
 
 export default router

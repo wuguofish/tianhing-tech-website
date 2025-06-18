@@ -229,7 +229,7 @@
 
               <div class="grid grid-cols-2 gap-4">
                 <div class="text-center">
-                  <div class="font-cubic text-2xl font-bold text-tianhing-dark-blue">5</div>
+                  <div class="font-cubic text-2xl font-bold text-tianhing-dark-blue">6</div>
                   <div class="text-sm text-gray-600">國家據點</div>
                 </div>
                 <div class="text-center">

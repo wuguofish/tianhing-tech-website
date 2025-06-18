@@ -6,8 +6,8 @@
         <!-- 公司資訊 -->
         <div class="space-y-4">
           <div class="flex items-center space-x-3">
-            <div class="w-8 h-8 bg-gradient-to-br from-tianhing-blue to-white rounded flex items-center justify-center">
-              <span class="font-cubic text-tianhing-dark-blue text-xs font-bold">TH</span>
+            <div class="w-12 h-12 flex items-center justify-center">
+              <img src="/logo.svg" alt="天行科技 Logo">
             </div>
             <div>
               <h3 class="font-cubic text-lg font-bold">天行科技</h3>

@@ -182,10 +182,13 @@
             </p>
           </div>
 
-          <div class="mt-8">
+          <!--
+            <div class="mt-8">
             <button class="btn-primary mr-4">申請測試</button>
             <button class="btn-secondary">安全須知</button>
           </div>
+          -->
+
         </div>
 
         <div class="bg-gradient-to-br from-gray-50 to-tianhing-light-blue p-8 rounded-2xl border border-tianhing-blue">
@@ -298,10 +301,12 @@
             </p>
           </div>
 
-          <div class="mt-8">
+          <!--
+            <div class="mt-8">
             <button class="btn-primary mr-4">諮詢服務</button>
             <button class="btn-secondary">倫理聲明</button>
           </div>
+          -->
         </div>
 
         <div class="bg-gradient-to-br from-gray-50 to-gray-100 p-8 rounded-2xl border border-gray-300">
@@ -484,16 +489,19 @@
           無論您選擇哪種產品，天行科技都將為您提供最專業的服務和技術支援。
           讓我們一起探索數位生命的無限可能。
         </p>
-        <div class="flex flex-col sm:flex-row gap-4 justify-center">
-          <button class="btn-primary bg-white text-tianhing-dark-blue hover:bg-tianhing-light-blue">
+        <div class="flex flex-col sm:flex-row gap-4 justify-center max-h-max justify-items-center">
+          <a href="./demo" target="_blank"
+            class=" btn-primary bg-white border-white border-2 text-tianhing-dark-blue hover:bg-tianhing-light-blue h-full">
             預約展示
-          </button>
-          <button class="btn-secondary border-white text-white hover:bg-white hover:text-tianhing-dark-blue">
+          </a>
+          <a href="./readme" target="_blank"
+            class="btn-secondary border-white text-white hover:bg-white hover:text-tianhing-dark-blue h-full">
             下載手冊
-          </button>
-          <button class="btn-secondary border-white text-white hover:bg-white hover:text-tianhing-dark-blue">
+          </a>
+          <a href="./specialthanks"
+            class="btn-secondary border-white text-white hover:bg-white hover:text-tianhing-dark-blue h-full">
             技術諮詢
-          </button>
+          </a>
         </div>
       </div>
     </section>

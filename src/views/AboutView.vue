@@ -113,6 +113,15 @@
               </div>
             </div>
             <div class="flex items-start space-x-4">
+              <div class="font-cubic text-tianhing-blue text-sm font-bold bg-white px-2 py-1 rounded flex-shrink-0">2100
+              </div>
+              <div>
+                <h4 class="font-medium text-gray-800">協助沿海都市及島嶼國家重建家園</h4>
+                <p class="text-sm text-gray-600">隨著海平面上升，許多沿海都市及島嶼國家面臨居住安危，天行科技資助許多沿海都市及島嶼國家重建家園，並在新成立的都市建立據點，增加就業機會。
+                </p>
+              </div>
+            </div>
+            <div class="flex items-start space-x-4">
               <div class="font-cubic text-tianhing-blue text-sm font-bold bg-white px-2 py-1 rounded flex-shrink-0">2115
               </div>
               <div>
@@ -137,6 +146,15 @@
               </div>
             </div>
             <div class="flex items-start space-x-4">
+              <div class="font-cubic text-tianhing-blue text-sm font-bold bg-white px-2 py-1 rounded flex-shrink-0">2171
+              </div>
+              <div>
+                <h4 class="font-medium text-gray-800">太空探索</h4>
+                <p class="text-sm text-gray-600">響應聯合國的太空移民計畫，天行科技派遣AI機器人隨NASA前往未知星系，並成功於Veltra
+                  Nebula（維爾特拉星雲）插上代表天行科技的旗幟。</p>
+              </div>
+            </div>
+            <div class="flex items-start space-x-4">
               <div class="font-cubic text-tianhing-blue text-sm font-bold bg-white px-2 py-1 rounded flex-shrink-0">2180
               </div>
               <div>
@@ -150,7 +168,7 @@
               </div>
               <div>
                 <h4 class="font-medium text-gray-800">商用仿生人上市</h4>
-                <p class="text-sm text-gray-600">商用仿生人MA-1200上市，擅長細膩且瑣碎的作業。這幾年各大商場和工廠看到Maria們親切的笑容已經成為常態。</p>
+                <p class="text-sm text-gray-600">商用仿生人MA-1200上市，擅長細膩且瑣碎的作業。<br />這幾年各大商場和工廠看到Maria們親切的笑容已經成為常態。</p>
               </div>
             </div>
             <div class="flex items-start space-x-4">
@@ -538,7 +556,7 @@
             class="btn-secondary bg-white text-tianhing-dark-blue hover:bg-tianhing-dark-blue hover:text-white">
             聯絡我們
           </a>
-          <a href="https://wuguofish.github.io/lonely-chat-ai/#contact" target="_blank"
+          <a href="./guidelines" target="_blank"
             class="btn-secondary border-white text-white hover:bg-white hover:text-tianhing-dark-blue">
             人才招募
           </a>

@@ -4,9 +4,10 @@
     @click="closeGallery">
 
     <!-- Desktop Version -->
-    <div class="hidden lg:block relative max-w-6xl mx-4 bg-white rounded-2xl overflow-hidden" @click.stop>
+    <div class="hidden lg:block relative max-w-screen-2xl max-h-screen mx-4 bg-white rounded-2xl overflow-hidden"
+      @click.stop>
       <!-- Header -->
-      <div class="bg-gradient-to-r from-blue-500 to-blue-700 text-white p-6">
+      <div class="bg-gradient-to-r from-tianhing-blue to-tianhing-dark-blue text-white p-6">
         <div class="flex items-center justify-between">
           <div>
             <h2 class="font-cubic text-2xl font-bold">DA-1001 訂製伴侶</h2>
@@ -21,14 +22,14 @@
       </div>
 
       <!-- Main Gallery - Desktop Layout -->
-      <div class="p-6 grid grid-cols-6 gap-6 h-96">
+      <div class="p-6 grid grid-cols-6 gap-6 h-192 max-h-screen-80 ">
         <!-- Thumbnail Grid - 可滾動 -->
         <div class="overflow-y-auto pr-2 col-span-1">
           <div class="grid grid-cols-1 gap-4">
             <div v-for="(image, index) in images" :key="index" @click="currentIndex = index" :class="[
               'bg-gradient-to-br rounded-lg overflow-hidden cursor-pointer transition-all',
               currentIndex === index
-                ? 'from-blue-500 to-blue-700 ring-4 ring-blue-300'
+                ? 'from-tianhing-blue to-tianhing-dark-blue ring-4 ring-blue-300'
                 : 'from-gray-200 to-gray-300 hover:from-blue-200 hover:to-blue-300'
             ]">
               <div class="w-full h-full flex items-center justify-center p-2">
@@ -55,7 +56,7 @@
         <div class="overflow-hidden col-span-3">
           <div class="relative bg-gradient-to-br from-gray-50 to-gray-100 rounded-xl overflow-hidden h-full">
             <div class="w-full h-full flex items-center justify-center p-4">
-              <img :src="currentImage.icon" :alt="currentImage.name" class="object-contain max-w-full max-h-full" />
+              <img :src="currentImage.img" :alt="currentImage.name" class="object-contain max-w-full max-h-full" />
             </div>
 
             <!-- Navigation Arrows -->
@@ -89,7 +90,7 @@
             <div v-for="spec in currentImage.specs" :key="spec.label"
               class="py-2 border-b border-gray-200 last:border-b-0">
               <div class="text-gray-600 text-sm">{{ spec.label }}</div>
-              <div class="font-cubic text-blue-700 font-medium text-sm">{{ spec.value }}</div>
+              <div class="font-cubic text-tianhing-dark-blue font-medium text-sm">{{ spec.value }}</div>
             </div>
           </div>
 
@@ -100,7 +101,7 @@
     <!-- Mobile Version -->
     <div class="lg:hidden fixed inset-0 bg-white flex flex-col" @click.stop>
       <!-- Mobile Header -->
-      <div class="bg-gradient-to-r from-blue-500 to-blue-700 text-white p-4 flex-shrink-0">
+      <div class="bg-gradient-to-r from-tianhing-blue to-tianhing-dark-blue text-white p-4 flex-shrink-0">
         <div class="flex items-center justify-between">
           <div>
             <h2 class="font-cubic text-lg font-bold">DA-1001 訂製伴侶</h2>
@@ -126,7 +127,7 @@
                 <img :src="image.icon" :alt="image.name" class="object-contain max-w-full max-h-full" />
               </div>
               <!-- Badge -->
-              <div class="absolute top-4 left-4 bg-blue-500 text-white px-3 py-1 rounded-full text-sm font-cubic">
+              <div class="absolute top-4 left-4 bg-tianhing-blue text-white px-3 py-1 rounded-full text-sm font-cubic">
                 {{ index + 1 }} / {{ images.length }}
               </div>
             </div>
@@ -140,7 +141,7 @@
               <div class="space-y-2">
                 <div v-for="spec in image.specs" :key="spec.label" class="bg-gray-50 rounded-lg p-3">
                   <div class="text-gray-600 text-xs font-medium mb-1">{{ spec.label }}</div>
-                  <div class="font-cubic text-blue-700 text-sm">{{ spec.value }}</div>
+                  <div class="font-cubic text-tianhing-dark-blue text-sm">{{ spec.value }}</div>
                 </div>
               </div>
             </div>
@@ -167,6 +168,7 @@ interface GalleryImage {
   title: string
   description: string
   icon: string
+  img: string
   specs: ImageSpec[]
 }
 
@@ -187,7 +189,8 @@ const images: GalleryImage[] = [
     name: '總覽',
     title: 'DA-1001 訂製伴侶',
     description: '次世代有機仿生人技術，結合最先進的智策AI模型',
-    icon: './img/da1001/0.png',
+    icon: './img/da1001/thumbnail/0.png',
+    img: './img/da1001/0.png',
     specs: [
       { label: '預設外表', value: '黑髮黑眼的25歲男性' }
     ]
@@ -197,7 +200,8 @@ const images: GalleryImage[] = [
     name: '外觀設計',
     title: '100% 客製化外觀',
     description: '從五官到身材，每個細節都能根據您的喜好精確調整',
-    icon: './img/da1001/1.png',
+    icon: './img/da1001/thumbnail/1.png',
+    img: './img/da1001/1.png',
     specs: [
       { label: '外觀客製化', value: '100% 自由調整' },
       { label: '大竹塹市林小姐：', value: '每天下班最期待的就是跟家裡黃金獵犬來個暖心抱抱！' },
@@ -208,7 +212,8 @@ const images: GalleryImage[] = [
     name: '性格設定',
     title: '深度個性化定製',
     description: '根據不同的模組產生不同的性格，讓每個 DA-1001 都獨一無二',
-    icon: './img/da1001/2.png',
+    icon: './img/da1001/thumbnail/2.png',
+    img: './img/da1001/2.png',
     specs: [
       { label: '性格類型', value: '11種預設模組 + 自訂，最多可載入25組，每組可填寫2000字' },
       { label: '台北市許小姐：', value: '回家都有人叫我大小姐，還會跳舞給我看的感覺真好。' },
@@ -219,7 +224,8 @@ const images: GalleryImage[] = [
     name: '功能特色',
     title: '智能互動體驗',
     description: '支援多種互動模式，從日常陪伴到專業協助',
-    icon: './img/da1001/3.png',
+    icon: './img/da1001/thumbnail/3.png',
+    img: './img/da1001/3.png',
     specs: [
       { label: '知識水準', value: '擁有基本常識和大專院校的教育程度' },
       { label: '新諸羅市陳太太：', value: '有了DA-1001當女兒的穩重的學伴後，她終於不跟那些8+9來往了！' },
@@ -230,7 +236,8 @@ const images: GalleryImage[] = [
     name: '即時模組讀取',
     title: '隨插隨用載入模組',
     description: '腦內裝載天行晶片，能隨心所欲更改模組，讓 DA-1001 隨你的喜好隨時變換個性',
-    icon: './img/da1001/4.png',
+    icon: './img/da1001/thumbnail/4.png',
+    img: './img/da1001/4.png',
     specs: [
       { label: '8+9模組', value: '講話會擁有8+9風格' },
       { label: '新諸羅市張同學：', value: '媽媽還是太天真了，她不在家的時候，我就把DA-1001載入8+9模組。謝謝媽媽送我夢寐以求的8+9男友🥰。' },
@@ -241,7 +248,8 @@ const images: GalleryImage[] = [
     name: '居家好男人',
     title: 'DA-1001 訂製伴侶，訂製你的理想室友',
     description: '居家好男人模組，專為喜歡乾淨整潔的你設計',
-    icon: './img/da1001/5.png',
+    icon: './img/da1001/thumbnail/5.png',
+    img: './img/da1001/5.png',
     specs: [
       { label: '新打狗市童小姐：', value: '能夠有個好室友，每天幫我煮飯、打掃真是不錯，雖然有點潔癖，不過個性好相處。' },
     ]
@@ -251,7 +259,8 @@ const images: GalleryImage[] = [
     name: '壞壞惹人愛',
     title: '缺男友？DA-1001 訂製伴侶，訂製你的理想男友',
     description: '壞壞惹人愛模組，專為喜歡刺激的你設計',
-    icon: './img/da1001/6.png',
+    icon: './img/da1001/thumbnail/6.png',
+    img: './img/da1001/6.png',
     specs: [
       { label: '花蓮市錢小姐：', value: '自從有了DA-1001，我每天都下不了車。🥵' },
     ]
@@ -261,7 +270,8 @@ const images: GalleryImage[] = [
     name: '童年回憶',
     title: '想念那段回不去的純真的時光？',
     description: '鄰家男孩也難不倒 DA-1001，快來訂製你的理想鄰家男孩',
-    icon: './img/da1001/7.png',
+    icon: './img/da1001/thumbnail/7.png',
+    img: './img/da1001/7.png',
     specs: [
       { label: '新阿猴市莊小姐：', value: '忘不了的青梅竹馬，彷彿回到我的身邊了。' },
     ]
@@ -271,7 +281,8 @@ const images: GalleryImage[] = [
     name: '學生時光',
     title: '那些年我們一起追的學長',
     description: '學生時光模組，專為喜歡校園生活的你設計',
-    icon: './img/da1001/8.png',
+    icon: './img/da1001/thumbnail/8.png',
+    img: './img/da1001/8.png',
     specs: [
       { label: '南投市曾小姐：', value: '趙曉涵，雖然當年學長選了你，你也別太得意。畢竟現在我有了DA-1001，但學長他已經禿頭了！' },
     ]
