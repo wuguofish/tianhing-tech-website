@@ -259,27 +259,6 @@ import { ref } from 'vue'
 
 const isLoading = ref(false)
 
-// 開啟產品詳細頁面的新視窗
-const openProductDetails = async () => {
-  isLoading.value = true
-
-  try {
-    // 可以在這裡加入分析追蹤
-    // analytics.track('product_detail_clicked', { product: 'DA-1001' })
-
-    // 小延遲提供視覺回饋
-    await new Promise(resolve => setTimeout(resolve, 200))
-
-    // 開啟新視窗
-    const url = `./products`
-    window.open(url, '_blank', 'noopener, noreferrer')
-  } catch (error) {
-    console.error('開啟產品頁面時發生錯誤:', error)
-  } finally {
-    isLoading.value = false
-  }
-}
-
 // 開啟指定產品的詳細頁面
 const openProductDetail = (productId: string) => {
   // 根據產品 ID 決定開啟方式

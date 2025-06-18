@@ -84,7 +84,7 @@
               </div>
               <div>
                 <h4 class="font-medium text-gray-800">智策AI全面應用至大中華邦聯</h4>
-                <p class="text-sm text-gray-600">大中華邦聯各政府全面採用智策AI協助訂定政策，並成功緩和大中華邦聯內部的政局動盪，提升國民幸福指數。</p>
+                <p class="text-sm text-gray-600">大中華邦聯各政府全面採用智策AI協助訂定政策，提升國民幸福指數，獲大中華邦聯最高領導人高度肯定。</p>
               </div>
             </div>
             <div class="flex items-start space-x-4">
@@ -117,7 +117,7 @@
               </div>
               <div>
                 <h4 class="font-medium text-gray-800">三賢人系統發表</h4>
-                <p class="text-sm text-gray-600">與Nova Tech、星人實業合作開發三賢人決策系統，共同為人類的未來尋求最佳解。</p>
+                <p class="text-sm text-gray-600">與Nova Tech、星人實業合作開發三賢人決策系統，並經聯合國投票決議採用為全球政策決策系統，共同為人類的未來尋求最佳解。</p>
               </div>
             </div>
             <div class="flex items-start space-x-4">
@@ -125,7 +125,7 @@
               </div>
               <div>
                 <h4 class="font-medium text-gray-800">心靈網路技術突破</h4>
-                <p class="text-sm text-gray-600">實現首次多人意識同步。</p>
+                <p class="text-sm text-gray-600">實現首次多人意識同步，突破距離限制，進行心靈交流。</p>
               </div>
             </div>
             <div class="flex items-start space-x-4">
