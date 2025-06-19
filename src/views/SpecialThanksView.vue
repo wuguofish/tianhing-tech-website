@@ -25,7 +25,8 @@
         </p>
         <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
           <!-- 團隊成員示例 -->
-          <div v-for="member in members" :key="member.name" class="bg-white rounded-lg shadow-lg p-6 text-center"
+          <div v-for="member in members" :key="member.name"
+            class="bg-white rounded-lg shadow-lg p-6 text-center hover:shadow-xl transition-shadow duration-300 cursor-pointer"
             @click="openMemberUrl(member.url)">
             <img :src="member.image" :alt="member.name" class="w-24 h-24 mx-auto rounded-full mb-4 object-contain">
             <h3 class="text-xl font-semibold text-tianhing-dark-blue">{{ member.name }}</h3>
