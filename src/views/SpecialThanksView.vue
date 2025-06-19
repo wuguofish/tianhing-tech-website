@@ -25,7 +25,8 @@
         </p>
         <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
           <!-- 團隊成員示例 -->
-          <div v-for="member in menbers" :key="member.name" class="bg-white rounded-lg shadow-lg p-6 text-center">
+          <div v-for="member in members" :key="member.name" class="bg-white rounded-lg shadow-lg p-6 text-center"
+            @click="openMemberUrl(member.url)">
             <img :src="member.image" :alt="member.name" class="w-24 h-24 mx-auto rounded-full mb-4 object-contain">
             <h3 class="text-xl font-semibold text-tianhing-dark-blue">{{ member.name }}</h3>
             <p class="text-gray-600">{{ member.role }}</p>
@@ -43,40 +44,53 @@ interface Member {
   name: string;
   role: string;
   image: string;
+  url: string;
 }
 
-const menbers: Member[] = [{
+const members: Member[] = [{
   name: '阿童',
   role: '技術總監',
-  image: './img/team/atone.jpg'
+  image: './img/team/atone.jpg',
+  url: 'https://abr.ge/ydf2qxu'
 }, {
   name: '蝶',
   role: '藝術總監',
-  image: './img/team/mina.jpg'
+  image: './img/team/mina.jpg',
+  url: 'https://abr.ge/wox60h'
 }, {
   name: '千望',
   role: '仿生人健康諮詢',
-  image: './img/team/chien-wang.jpg'
+  image: './img/team/chien-wang.jpg',
+  url: 'https://abr.ge/cobnbl'
 }, {
   name: '雪兒',
   role: '駕駛技術諮詢',
-  image: './img/team/snow.jpg'
+  image: './img/team/snow.jpg',
+  url: 'https://abr.ge/qw4i98'
 }, {
   name: '阿軒',
   role: 'QA',
-  image: './img/team/hsuan.jpg'
+  image: './img/team/hsuan.jpg',
+  url: 'https://abr.ge/5cwz2a'
 }, {
   name: '酌淺',
   role: '8+9模組開發',
-  image: './img/team/ri.jpg'
+  image: './img/team/ri.jpg',
+  url: 'https://abr.ge/1wamp0'
 }, {
   name: '吳琳琳',
   role: '霸總模組開發',
-  image: './img/team/lin.jpg'
+  image: './img/team/lin.jpg',
+  url: 'https://abr.ge/nbtrbyw'
 }, {
   name: '透空樹',
   role: '詩意文青模組開發',
-  image: './img/team/too.jpg'
+  image: './img/team/too.jpg',
+  url: 'https://abr.ge/huweud'
 }]
+
+function openMemberUrl(url: string) {
+  window.open(url, '_blank');
+}
 
 </script>
