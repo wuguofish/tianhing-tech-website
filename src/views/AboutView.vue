@@ -389,7 +389,7 @@
           </div>
         </div>
 
-        <!-- 馬來西亞辦事處 -->
+        <!-- 馬來西亞辦公室 -->
         <div class="bg-white rounded-2xl shadow-lg border border-tianhing-blue overflow-hidden">
           <div class="bg-gradient-to-br from-tianhing-blue to-tianhing-dark-blue p-6">
             <div class="flex items-center space-x-3 mb-4">
@@ -397,7 +397,7 @@
                 <span class="font-cubic text-tianhing-dark-blue text-xs font-bold">MY</span>
               </div>
               <div>
-                <h3 class="font-cubic text-white text-lg font-bold">馬來西亞辦事處</h3>
+                <h3 class="font-cubic text-white text-lg font-bold">馬來西亞辦公室</h3>
                 <p class="text-tianhing-light-blue text-sm">Malaysia Office</p>
               </div>
             </div>
@@ -439,7 +439,7 @@
             </div>
           </div>
         </div>
-        <!-- 泰國辦事處 -->
+        <!-- 泰國辦公室 -->
         <div class="bg-white rounded-2xl shadow-lg border border-tianhing-blue overflow-hidden">
           <div class="bg-gradient-to-br from-tianhing-dark-blue to-gray-700 p-6">
             <div class="flex items-center space-x-3 mb-4">
@@ -447,7 +447,7 @@
                 <span class="font-cubic text-tianhing-dark-blue text-xs font-bold">TH</span>
               </div>
               <div>
-                <h3 class="font-cubic text-white text-lg font-bold">泰國辦事處</h3>
+                <h3 class="font-cubic text-white text-lg font-bold">泰國辦公室</h3>
                 <p class="text-tianhing-light-blue text-sm">Thailand Office</p>
               </div>
             </div>
@@ -490,7 +490,7 @@
           </div>
         </div>
 
-        <!-- 菲律賓辦事處 -->
+        <!-- 菲律賓辦公室 -->
         <div class="bg-white rounded-2xl shadow-lg border border-tianhing-blue overflow-hidden">
           <div class="bg-gradient-to-br from-gray-600 to-gray-700 p-6">
             <div class="flex items-center space-x-3 mb-4">
@@ -498,7 +498,7 @@
                 <span class="font-cubic text-tianhing-dark-blue text-xs font-bold">PHL</span>
               </div>
               <div>
-                <h3 class="font-cubic text-white text-lg font-bold">菲律賓辦事處</h3>
+                <h3 class="font-cubic text-white text-lg font-bold">菲律賓辦公室</h3>
                 <p class="text-tianhing-light-blue text-sm">Philippine Office</p>
               </div>
             </div>
